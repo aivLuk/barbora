@@ -1,0 +1,20 @@
+.CheckoutContainer {
+   margin-top: 20px;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.Order {
+    background-color: #f05e23;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}

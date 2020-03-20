@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Viaoda+Libre&display=swap');
+
+.Header {
+    display: flex;
+    height: 10vh;
+    padding: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 5px 5px -8px #000;
+    z-index: 10;
+}
+
+.Logo {
+    font-family: 'Viaoda Libre', cursive;
+    font-size: 30px;
+    margin-right: auto;
+    color: #f05e23;
+    cursor: pointer;
+}
+
+.Cart {
+    margin-right: 20px;
+}
+
+.Header p {
+    transition: all .3s ease;
+}
+
+.Header p:hover {
+    cursor: pointer;
+    color: #f05e23;
+}

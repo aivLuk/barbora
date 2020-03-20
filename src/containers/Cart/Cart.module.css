@@ -1,0 +1,98 @@
+.Backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.Modal {
+    width: 700px;
+    height: 400px;
+    position: fixed;
+    z-index: 150;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0 0 10px;
+    animation-name: slide;
+    animation-duration: .5s;
+    text-align: center;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.CartProduct {
+    display: flex;
+    width: 70%;
+    margin: 10px auto;
+}
+
+.CartProduct img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.CartName {
+    width: 150px;
+    text-align: left;
+}
+
+.CartQuantity {
+    width: 30px;
+    margin-right: 100px;
+}
+.DeleteProduct {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.CartProductsContainer {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    max-height: 200px;
+    overflow: overlay;
+}
+
+.CartProductsContainer::-webkit-scrollbar {
+    width: 5px;
+}
+
+.CartProductsContainer::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #9c3005, #f05e23);
+}
+
+.CartContinue {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    background-color: #f05e23;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+.CloseModal {
+    font-weight: bold;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+}

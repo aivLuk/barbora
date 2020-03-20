@@ -1,0 +1,82 @@
+.ProductContainer {
+    width: 85%;
+    height: 90vh;
+    display: inline-block;
+    float: right;
+}
+
+.Fruits {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+.AddToCart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    cursor: pointer;
+    padding: 5px 5px;
+    background-color: #f05e23;
+    border: none;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+
+.AddToCart:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+.Fruits input {
+    width: 20px;
+    border: 1px solid #f05e23;
+    border-radius: 3px;
+}
+
+.Plus {
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    border: none;
+    background-color: #f05e23;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.Minus {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    border: none;
+    background-color: #f05e23;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.Disabled {
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    border: none;
+    background-color: #aaa;
+    border-radius: 50%;
+    cursor: not-allowed;
+    transition: all .3s ease;
+}
+
+.Plus:hover, .Minus:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+.Fruits span {
+    display: block;
+    margin: 5px 0;
+}

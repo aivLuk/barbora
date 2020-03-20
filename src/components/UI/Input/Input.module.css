@@ -1,0 +1,18 @@
+.InputElement {
+    width: 500px;
+    height: 30px;
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 30px;
+    max-height: 120px;
+    margin: 10px auto;
+}
+
+.InputElement:focus {
+    background-color: #eee;
+}
+
+.Invalid {
+    border: 1px solid red;
+    background-color: rgb(236, 203, 200);
+}

@@ -1,0 +1,24 @@
+.Sidebar {
+    display: inline-block;
+    float: left;
+    width: 15%;
+    height: 90vh;
+    border-right: 1px solid #ccc;
+    box-shadow: 5px 0 5px -8px #000;
+}
+
+.Sidebar a {
+    text-align: left;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    transition: all .3s ease;
+}
+
+.Sidebar a:hover {
+    cursor: pointer;
+    color: #f05e23;
+    background-color: #ddd; 
+}
+
