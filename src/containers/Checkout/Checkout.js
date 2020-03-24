@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styles from './Checkout.module.css';
 import Input from '../../components/UI/Input/Input';
+import axios from 'axios';
+import { withRouter, Redirect } from 'react-router-dom';
 
 class Checkout extends Component {
     state = {
@@ -15,7 +17,8 @@ class Checkout extends Component {
                 validation: {
                     required: true
                 },
-                valid: false
+                valid: false,
+                isTouched: false
             },
             address: {
                 fieldType: 'input',
@@ -27,7 +30,8 @@ class Checkout extends Component {
                 validation: {
                     required: true
                 },
-                valid: false
+                valid: false,
+                isTouched: false
             },
             zipCode: {
                 fieldType: 'input',
@@ -40,7 +44,8 @@ class Checkout extends Component {
                     required: true,
                     zipLength: 5
                 },
-                valid: false
+                valid: false,
+                isTouched: false
             },
             delivery: {
                 fieldType: 'select',
@@ -50,7 +55,9 @@ class Checkout extends Component {
                         { value: 'cheapest', displayValue: 'Cheapest Shipping' }
                     ]
                 },
-                value: ''
+                value: 'fastest',
+                validation: {},
+                valid: true
             },
             comments: {
                 fieldType: 'textArea',
@@ -58,9 +65,12 @@ class Checkout extends Component {
                     type: 'text',
                     placeholder: 'Information to our courrier...'
                 },
-                value: ''
+                value: '',
+                validation: {},
+                valid: true
             }
-        }
+        },
+        formValidity: false
     }
 
     inputChangedHandler = (event, id) => {
@@ -68,9 +78,15 @@ class Checkout extends Component {
         let updatedFormElement = { ...updatedForm[id] };
         updatedFormElement.value = event.target.value;
         updatedFormElement.valid = this.inputValidation(updatedFormElement.value, updatedFormElement.validation)
+        updatedFormElement.isTouched = true;
         updatedForm[id] = updatedFormElement;
-        console.log(updatedForm[id])
-        this.setState({ form: updatedForm })
+
+        let formValid = true;
+        for (let formID in updatedForm) {
+            formValid = updatedForm[formID].valid && formValid
+        }
+
+        this.setState({ form: updatedForm, formValidity: formValid })
     }
 
     inputValidation = (value, rules) => {
@@ -81,10 +97,31 @@ class Checkout extends Component {
         }
 
         if (rules.zipLength) {
-            isValid = value.length === 5 && isValid;
+            isValid = value.trim().length === 5 && isValid;
         }
 
         return isValid;
+    }
+
+    sendData = () => {
+        const orderData = {
+            products: this.props.order,
+            contact: {
+                name: this.state.form.name.value,
+                address: this.state.form.address.value,
+                zipCode: this.state.form.zipCode.value,
+                delivery: this.state.form.delivery.value,
+                comments: this.state.form.comments.value
+            }
+        }
+        axios.post('https://react-my-burger-48405.firebaseio.com/barbora.json', orderData)
+            .then(response => {
+                this.props.history.push('/')
+                window.location.reload();
+            })
+            .catch(err => {
+                alert('Oops...Someting went wrong!')
+            })
     }
 
     render() {
@@ -104,7 +141,7 @@ class Checkout extends Component {
                 value={element.config.value}
                 inputChanged={(event) => this.inputChangedHandler(event, element.id)}
                 notValid={!element.config.valid}
-                shouldValidate={element.config.validation} />
+                touched={element.config.isTouched} />
         })
 
         return (
@@ -113,10 +150,13 @@ class Checkout extends Component {
                 <form className={styles.Form}>
                     {shippingForm}
                 </form>
-                <button className={styles.Order}>ORDER</button>
+                <button
+                    className={styles.Order}
+                    disabled={!this.state.formValidity}
+                    onClick={this.sendData}>ORDER</button>
             </div>
         )
     }
 }
 
-export default Checkout;
+export default withRouter(Checkout);

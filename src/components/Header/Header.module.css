@@ -31,3 +31,8 @@
     cursor: pointer;
     color: #f05e23;
 }
+
+.Header a {
+    text-decoration: none;
+    color: black;
+}

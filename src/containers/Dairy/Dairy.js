@@ -45,6 +45,7 @@ class Dairy extends Component {
                                 className={styles.Plus}
                                 onClick={() => this.productAdded(element.name)}>+</button>
                             <input value={element.quantity} />
+                            <label> / units</label>
                             <button className={styles.AddToCart} onClick={() => this.props.added(this.state.dairy)}>Add to Cart</button>
                         </div>
                     )

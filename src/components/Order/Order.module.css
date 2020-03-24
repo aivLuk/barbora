@@ -1,0 +1,59 @@
+.OrderContainer {
+    width: 80%;
+    text-align: left;
+    margin: 15px 0;
+    margin-left: 17.5%;
+    border: 1px solid #ccc;
+}
+
+.OrderID {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ContactsContainer {
+    display: flex;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    font-size: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.ContactsContainer p {
+    margin-right: 10px;
+}
+
+.ProductsContainer {
+    display: flex;
+}
+
+.ProductsContainer img {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ProductsContainer p {
+    margin: 5px 0;
+}
+
+.ProductName {
+    width: 150px;
+    height: 15px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.ProductQuantity {
+    width: 150px;
+    height: 15px;
+    text-align: left;
+}
+
+.ProductPrice {
+    height: 15px;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Header.module.css';
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 
 const Header = (props) => {
     return (
@@ -10,7 +10,7 @@ const Header = (props) => {
                 className={styles.Cart}
                 style={{ color: props.cartLength > 0 ? 'red' : 'black' }}
                 onClick={props.cartClicked}>Cart</p>
-            <p>Order History</p>
+            <Link to="/order-history">Order History</Link>
         </div>
     )
 }

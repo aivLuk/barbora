@@ -10,7 +10,8 @@ import Meat from './containers/Meat/Meat';
 import Banner from './components/Banner/Banner';
 import Backdrop from './components/UI/Backdrop/Backdrop';
 import Checkout from './containers/Checkout/Checkout';
-import { Route } from 'react-router-dom';
+import OrderHistory from './containers/OrderHistory/OrderHistory';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   state = {
@@ -81,22 +82,28 @@ class App extends Component {
             cartLength={this.state.cart.length} />
           <Sidebar />
           <Route path="/" exact component={Banner} />
-          <Route path="/dairy" render={() => {
-            return <Dairy added={this.dairyAdded} />
-          }} />
-          <Route path="/bread" render={() => {
-            return <Bread added={this.breadAdded} />
-          }} />
-          <Route path="/vegetables" render={() => {
-            return <Vegetables added={this.vegetablesAdded} />
-          }} />
-          <Route path="/fruits" render={() => {
-            return <Fruits added={this.fruitsAdded} />
-          }} />
-          <Route path="/meat" render={() => {
-            return <Meat added={this.meatAdded} />
-          }} />
-          <Route path="/checkout" component={Checkout} />
+          <Switch>
+            <Route path="/dairy" render={() => {
+              return <Dairy added={this.dairyAdded} />
+            }} />
+            <Route path="/bread" render={() => {
+              return <Bread added={this.breadAdded} />
+            }} />
+            <Route path="/vegetables" render={() => {
+              return <Vegetables added={this.vegetablesAdded} />
+            }} />
+            <Route path="/fruits" render={() => {
+              return <Fruits added={this.fruitsAdded} />
+            }} />
+            <Route path="/meat" render={() => {
+              return <Meat added={this.meatAdded} />
+            }} />
+            <Route path="/checkout" render={() => {
+              return <Checkout order={this.state.cart} />
+            }} />
+            <Route path="/order-history" component={OrderHistory} />
+            <Route component={Banner} />
+          </Switch>
         </div>
       </Backdrop>
     );

@@ -18,3 +18,9 @@
     text-decoration: none;
     color: #000;
 }
+
+.Order:disabled {
+    color: #eee;
+    background-color: #ccc;
+    cursor: not-allowed;
+}
