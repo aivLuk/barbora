@@ -22,3 +22,8 @@
     background-color: #ddd; 
 }
 
+@media (max-width: 800px) {
+    .Sidebar {
+        width: 150px;
+    }
+}

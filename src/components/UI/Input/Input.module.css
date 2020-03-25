@@ -24,3 +24,11 @@
     text-align: left;
     margin: 0 auto;
 }
+
+@media (max-width: 650px) {
+    .InputElement {
+        width: 95%;
+        min-width: 95%;
+        max-width: 95%;
+    }
+}

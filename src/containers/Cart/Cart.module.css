@@ -96,3 +96,48 @@
     right: 2%;
     cursor: pointer;
 }
+
+
+@media (max-width: 750px) {
+    .Modal {
+        width: 90%
+    }
+    .CartQuantity {
+    margin-right: 40px;
+    }
+    .DeleteProduct {
+    margin-right: 10px;
+    }
+    .CartProduct {
+        width: 100%;
+    }
+    .CartProduct img {
+        margin-left: 5px;
+    }
+    .Contain p {
+        text-align: left;
+        margin-left: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .Modal {
+        height: 80%
+    }
+    .CartQuantity {
+    margin-right: 0;
+    }
+    .CartProduct {
+        font-size: 13px;
+        align-items: center;
+    }
+    .CartName {
+        width: 120px;
+    }
+    .CartContinue {
+        font-size: 13px;
+    }
+    .CartProductsContainer {
+        max-height: 300px;
+    }
+}

@@ -22,7 +22,7 @@ class Cart extends Component {
         let cartUpdate = <h2>Your Cart Is Empty...</h2>
         if (this.props.cart.length > 0) {
             cartUpdate = (
-                <div>
+                <div className={styles.Contain}>
                     <h2>Order Summary</h2>
                     <span className={styles.CloseModal} onClick={this.props.close}>X</span>
                     <div className={styles.CartProductsContainer}>
