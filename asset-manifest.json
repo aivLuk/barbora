@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/raBarbara/static/css/main.f444bc27.chunk.css",
+    "main.js": "/raBarbara/static/js/main.64b27417.chunk.js",
+    "main.js.map": "/raBarbara/static/js/main.64b27417.chunk.js.map",
+    "runtime-main.js": "/raBarbara/static/js/runtime-main.69cc3b05.js",
+    "runtime-main.js.map": "/raBarbara/static/js/runtime-main.69cc3b05.js.map",
+    "static/js/2.3eecd268.chunk.js": "/raBarbara/static/js/2.3eecd268.chunk.js",
+    "static/js/2.3eecd268.chunk.js.map": "/raBarbara/static/js/2.3eecd268.chunk.js.map",
+    "index.html": "/raBarbara/index.html",
+    "precache-manifest.33464f382421705f6c6b0a137c1c9102.js": "/raBarbara/precache-manifest.33464f382421705f6c6b0a137c1c9102.js",
+    "service-worker.js": "/raBarbara/service-worker.js",
+    "static/css/main.f444bc27.chunk.css.map": "/raBarbara/static/css/main.f444bc27.chunk.css.map",
+    "static/js/2.3eecd268.chunk.js.LICENSE.txt": "/raBarbara/static/js/2.3eecd268.chunk.js.LICENSE.txt",
+    "static/media/Banner.module.css": "/raBarbara/static/media/banner.73c1c773.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.69cc3b05.js",
+    "static/js/2.3eecd268.chunk.js",
+    "static/css/main.f444bc27.chunk.css",
+    "static/js/main.64b27417.chunk.js"
+  ]
+}
