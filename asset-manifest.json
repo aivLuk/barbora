@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/barbora/static/css/main.680d6255.chunk.css",
-    "main.js": "/barbora/static/js/main.8029a13c.chunk.js",
-    "main.js.map": "/barbora/static/js/main.8029a13c.chunk.js.map",
-    "runtime-main.js": "/barbora/static/js/runtime-main.b5d49392.js",
-    "runtime-main.js.map": "/barbora/static/js/runtime-main.b5d49392.js.map",
-    "static/js/2.3eecd268.chunk.js": "/barbora/static/js/2.3eecd268.chunk.js",
-    "static/js/2.3eecd268.chunk.js.map": "/barbora/static/js/2.3eecd268.chunk.js.map",
-    "index.html": "/barbora/index.html",
-    "precache-manifest.ab49af32e56f0b48e74b10a0cdb6d346.js": "/barbora/precache-manifest.ab49af32e56f0b48e74b10a0cdb6d346.js",
-    "service-worker.js": "/barbora/service-worker.js",
-    "static/css/main.680d6255.chunk.css.map": "/barbora/static/css/main.680d6255.chunk.css.map",
-    "static/js/2.3eecd268.chunk.js.LICENSE.txt": "/barbora/static/js/2.3eecd268.chunk.js.LICENSE.txt",
-    "static/media/Banner.module.css": "/barbora/static/media/banner.73c1c773.jpg"
+    "main.css": "/raBarbara/static/css/main.f444bc27.chunk.css",
+    "main.js": "/raBarbara/static/js/main.64b27417.chunk.js",
+    "main.js.map": "/raBarbara/static/js/main.64b27417.chunk.js.map",
+    "runtime-main.js": "/raBarbara/static/js/runtime-main.69cc3b05.js",
+    "runtime-main.js.map": "/raBarbara/static/js/runtime-main.69cc3b05.js.map",
+    "static/js/2.3eecd268.chunk.js": "/raBarbara/static/js/2.3eecd268.chunk.js",
+    "static/js/2.3eecd268.chunk.js.map": "/raBarbara/static/js/2.3eecd268.chunk.js.map",
+    "index.html": "/raBarbara/index.html",
+    "precache-manifest.33464f382421705f6c6b0a137c1c9102.js": "/raBarbara/precache-manifest.33464f382421705f6c6b0a137c1c9102.js",
+    "service-worker.js": "/raBarbara/service-worker.js",
+    "static/css/main.f444bc27.chunk.css.map": "/raBarbara/static/css/main.f444bc27.chunk.css.map",
+    "static/js/2.3eecd268.chunk.js.LICENSE.txt": "/raBarbara/static/js/2.3eecd268.chunk.js.LICENSE.txt",
+    "static/media/Banner.module.css": "/raBarbara/static/media/banner.73c1c773.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b5d49392.js",
+    "static/js/runtime-main.69cc3b05.js",
     "static/js/2.3eecd268.chunk.js",
-    "static/css/main.680d6255.chunk.css",
-    "static/js/main.8029a13c.chunk.js"
+    "static/css/main.f444bc27.chunk.css",
+    "static/js/main.64b27417.chunk.js"
   ]
 }
