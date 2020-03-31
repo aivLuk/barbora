@@ -1,6 +1,7 @@
 .ProductContainer {
     width: 85%;
-    height: 90vh;
+    height: 100%;
+    margin-top: 10vh;
     display: inline-block;
     float: right;
 }
@@ -79,4 +80,31 @@
 .Fruits span {
     display: block;
     margin: 5px 0;
+}
+
+@media (max-width: 800px) {
+    .ProductContainer {
+        width: 70%;
+    }
+    .Fruits {
+        margin-left: calc((100% - 344px)/4);
+        margin-right: calc((100% - 344px)/4);
+    }
+}
+
+@media (max-width: 550px) {
+    .ProductContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .Fruits {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .ProductContainer {
+        width: 100%;
+    }
 }

@@ -3,8 +3,12 @@
     float: left;
     width: 15%;
     height: 90vh;
+    position: fixed;
+    top: 0;
+    left: 0;
     border-right: 1px solid #ccc;
     box-shadow: 5px 0 5px -8px #000;
+    margin-top: 10vh;
 }
 
 .Sidebar a {
@@ -24,6 +28,12 @@
 
 @media (max-width: 800px) {
     .Sidebar {
-        width: 150px;
+        width: 30%;
+        background-color: #fff;
+    }
+}
+@media (max-width: 500px) {
+    .Sidebar {
+        display: none;
     }
 }

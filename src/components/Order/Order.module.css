@@ -27,6 +27,7 @@
 
 .ProductsContainer {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .ProductsContainer img {
@@ -56,4 +57,51 @@
 
 .ProductPrice {
     height: 15px;
+}
+
+@media (max-width: 800px) {
+    .OrderContainer {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ContactsContainer {
+        flex-direction: column;
+    }
+    .ContactsContainer p {
+        margin-bottom: 2px;
+    }
+    .ProductName {
+        width: 105px;
+        font-size: 12px;
+        align-items: center;
+    }
+    .ProductQuantity {
+        width: 95px;
+        font-size: 12px;
+        align-items: center;
+    }
+    .ProductPrice {
+        font-size: 12px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .ProductName {
+        width: 90%;
+        font-size: 14px;
+    }
+    .ProductQuantity {
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    .ProductPrice {
+        font-size: 14px;
+    }
+    .ProductsContainer {
+        margin: 10px 0;
+        border-top: .5px solid #eee;
+        border-bottom: .5px solid #eee;
+    }
 }

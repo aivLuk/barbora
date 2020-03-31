@@ -1,0 +1,28 @@
+.OrderHistory {
+    margin-top: 12vh;
+}
+
+.OrderHistory h1 {
+    width: 85%;
+    margin-left: auto;
+}
+
+@media (max-width: 800px) {
+    .OrderHistory {
+        width: 70%;
+        float: right;
+    }
+    .OrderHistory h1 {
+    margin-right: auto;
+    margin-left: auto;
+}
+}
+
+@media (max-width: 500px) {
+    .OrderHistory {
+        width: 100%;
+    }
+    .OrderHistory h1 {
+        font-size: 25px;
+    }
+}

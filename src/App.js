@@ -11,12 +11,14 @@ import Banner from './components/Banner/Banner';
 import Backdrop from './components/UI/Backdrop/Backdrop';
 import Checkout from './containers/Checkout/Checkout';
 import OrderHistory from './containers/OrderHistory/OrderHistory';
+import MobileMenu from './components/MobileMenu/MobileMenu';
 import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   state = {
     cart: [],
-    cartActive: false
+    cartActive: false,
+    hamburgerActive: false
   }
 
   dairyAdded = (products) => {
@@ -69,41 +71,57 @@ class App extends Component {
     this.setState({ cart: cartUpdated })
   }
 
+  hamburgerToggle = () => {
+    this.setState({ hamburgerActive: !this.state.hamburgerActive })
+  }
+
+  hamburgerClosed = () => {
+    this.setState({ hamburgerActive: false })
+  }
+
   render() {
     return (
       <Backdrop
         active={this.state.cartActive}
         backdropClose={this.backdropClose}
         cart={this.state.cart}
-        removed={this.cartProductRemoved}>
+        removed={this.cartProductRemoved}
+        closeMobile={this.hamburgerClosed}>
         <div className="App">
           <Header
             cartClicked={this.cartClicked}
-            cartLength={this.state.cart.length} />
-          <Sidebar />
-          <Route path="/" exact component={Banner} />
-          <Switch>
-            <Route path="/dairy" render={() => {
-              return <Dairy added={this.dairyAdded} />
-            }} />
-            <Route path="/bread" render={() => {
-              return <Bread added={this.breadAdded} />
-            }} />
-            <Route path="/vegetables" render={() => {
-              return <Vegetables added={this.vegetablesAdded} />
-            }} />
-            <Route path="/fruits" render={() => {
-              return <Fruits added={this.fruitsAdded} />
-            }} />
-            <Route path="/meat" render={() => {
-              return <Meat added={this.meatAdded} />
-            }} />
-            <Route path="/checkout" render={() => {
-              return <Checkout order={this.state.cart} />
-            }} />
-            <Route path="/order-history" component={OrderHistory} />
-            <Route component={Banner} />
-          </Switch>
+            cartLength={this.state.cart.length}
+            hamburgerClicked={this.hamburgerToggle} />
+          <MobileMenu
+            active={this.state.hamburgerActive}
+            cartClicked={this.cartClicked}
+            cartLength={this.state.cart.length}
+            menuItemClicked={this.hamburgerToggle}>
+            <Sidebar />
+            <Switch>
+              <Route path="/" exact component={Banner} />
+              <Route path="/dairy" render={() => {
+                return <Dairy added={this.dairyAdded} />
+              }} />
+              <Route path="/bread" render={() => {
+                return <Bread added={this.breadAdded} />
+              }} />
+              <Route path="/vegetables" render={() => {
+                return <Vegetables added={this.vegetablesAdded} />
+              }} />
+              <Route path="/fruits" render={() => {
+                return <Fruits added={this.fruitsAdded} />
+              }} />
+              <Route path="/meat" render={() => {
+                return <Meat added={this.meatAdded} />
+              }} />
+              <Route path="/checkout" render={() => {
+                return <Checkout order={this.state.cart} />
+              }} />
+              <Route path="/order-history" component={OrderHistory} />
+              <Route component={Banner} />
+            </Switch>
+          </MobileMenu>
         </div>
       </Backdrop>
     );

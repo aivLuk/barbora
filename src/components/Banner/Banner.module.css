@@ -3,11 +3,20 @@
     height: 90vh;
     display: inline-block;
     float: right;
-    background-color: #f05e23;
+    margin-top: 10vh;
+    background-image: url('../../assets/images/banner.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.Banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+@media (max-width: 800px) {
+    .Banner {
+        width: 70%;
+    }
+}
+@media (max-width: 500px) {
+    .Banner {
+        width: 100%;
+    }
 }

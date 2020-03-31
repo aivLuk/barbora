@@ -46,7 +46,9 @@ class Meat extends Component {
                                 onClick={() => this.productAdded(element.name)}>+</button>
                             <input value={element.quantity} />
                             <label> / kg</label>
-                            <button className={styles.AddToCart} onClick={() => this.props.added(this.state.meat)}>Add to Cart</button>
+                            <button
+                                className={styles.AddToCart}
+                                onClick={() => this.props.added(this.state.meat)}>Add to Cart</button>
                         </div>
                     )
                 })}

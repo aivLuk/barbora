@@ -6,7 +6,7 @@ class Bread extends Component {
         bread: [
             { name: 'Organic Bread', quantity: 0, url: 'https://static.turbosquid.com/Preview/2019/05/11__23_11_25/BreadPackage3dmodel8.jpg8C5A7F50-CCA7-445D-BEFD-2343DA969918DefaultHQ.jpg', price: 2.2 },
             { name: 'Whole Wheat', quantity: 0, url: 'https://i.pinimg.com/236x/78/dd/6b/78dd6bb3e74179b4df422ec514bce1d0--plastic-packaging-food-packaging.jpg', price: 1.2 },
-            { name: 'Milk Bread', quantity: 0, url: 'https://lh3.googleusercontent.com/proxy/QJsD16x41HTPwrd-VzyJlhsXuJaTHHKuNB08StXJ2Kbil881cvEofUGxQpwW0v5N71DGcoHsIiKai_tQc4mGRUcgmMgXz0UtBFtTbobLgb3sepsodvtePW95xabhieP5', price: 1.6 },
+            { name: 'Milk Bread', quantity: 0, url: 'https://images-na.ssl-images-amazon.com/images/I/815XdY--ZDL._SX569_.jpg', price: 1.6 },
             { name: 'Toasted Bread', quantity: 0, url: 'https://image.made-in-china.com/202f0j00uiqfGclUIYoV/Toast-Bread-Package-Kraft-Paper-Bag.jpg', price: 1.8 }
         ]
     }
@@ -47,7 +47,9 @@ class Bread extends Component {
                                 onClick={() => this.productAdded(element.name)}>+</button>
                             <input value={element.quantity} />
                             <label> / units</label>
-                            <button className={styles.AddToCart} onClick={() => this.props.added(this.state.bread)}>Add to Cart</button>
+                            <button
+                                className={styles.AddToCart}
+                                onClick={() => this.props.added(this.state.bread)}>Add to Cart</button>
                         </div>
                     )
                 })}

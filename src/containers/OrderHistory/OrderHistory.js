@@ -43,7 +43,7 @@ class OrderHistory extends Component {
 
         console.log(this.state.orders)
         return (
-            <div>
+            <div className={styles.OrderHistory}>
                 <h1>Your order history</h1>
                 {orders}
             </div>

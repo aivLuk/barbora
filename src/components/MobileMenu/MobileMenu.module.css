@@ -1,0 +1,29 @@
+.Menu {
+    margin-top: 10vh;
+    height: 90vh;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Menu a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    padding: 15px 0;
+}
+
+.Cart {
+    text-transform: uppercase;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.Menu a:hover{
+    background-color: #ddd; 
+}
+
+.Cart:hover{
+    background-color: #ddd; 
+}

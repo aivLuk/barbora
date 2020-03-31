@@ -25,7 +25,7 @@
     margin: 0 auto;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 740px) {
     .InputElement {
         width: 95%;
         min-width: 95%;

@@ -1,5 +1,8 @@
 .CheckoutContainer {
-   margin-top: 20px;
+   margin-top: 12vh;
+   display: inline-block;
+    float: right;
+    width: 85%;
 }
 
 .Form {
@@ -24,3 +27,16 @@
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+@media (max-width: 800px) {
+    .CheckoutContainer {
+        width: 70%;
+    }
+}
+@media (max-width: 500px) {
+    .CheckoutContainer {
+        width: 100%;
+    }
+}
+
+
